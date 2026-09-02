@@ -1,0 +1,69 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "fields": {
+        "id": { "type": "string", "description": "Firebase Auth user UID" },
+        "name": { "type": "string", "description": "Display name" },
+        "email": { "type": "string", "description": "User email" },
+        "isGuest": { "type": "boolean", "description": "Whether user logged in as guest" },
+        "avatar": { "type": "string", "description": "User avatar URL or placeholder" },
+        "streakDays": { "type": "number", "description": "Current consecutive active writing streak" },
+        "lastJournalDate": { "type": "string", "description": "Date of latest saved journal (YYYY-MM-DD)" },
+        "totalJournals": { "type": "number", "description": "Total count of journals saved by user" },
+        "createdAt": { "type": "number", "description": "Timestamp created" },
+        "updatedAt": { "type": "number", "description": "Timestamp updated" }
+      }
+    },
+    "JournalEntry": {
+      "collection": "users/{userId}/journals",
+      "fields": {
+        "id": { "type": "string", "description": "Unique journal identifier" },
+        "title": { "type": "string", "description": "Journal title" },
+        "content": { "type": "string", "description": "Journal prose narrative" },
+        "date": { "type": "string", "description": "Journal date (YYYY-MM-DD)" },
+        "createdAt": { "type": "number", "description": "Creation timestamp" },
+        "updatedAt": { "type": "number", "description": "Last modified timestamp" },
+        "mood": { "type": "string", "description": "Emotion mood type (peaceful, grateful, etc.)" },
+        "weather": { "type": "string", "description": "Optional weather description" },
+        "location": { "type": "string", "description": "Optional geographic location" },
+        "tags": { "type": "array", "description": "Tags list" },
+        "photos": { "type": "array", "description": "Attached keepsakes and photo objects" },
+        "aiReflection": { "type": "string", "description": "Optional AI reflection note" },
+        "wordCount": { "type": "number", "description": "Total words" },
+        "readingTimeMinutes": { "type": "number", "description": "Estimated reading duration" },
+        "bookmarked": { "type": "boolean", "description": "Bookmark flag" },
+        "pinned": { "type": "boolean", "description": "Pinned flag" },
+        "themeColor": { "type": "string", "description": "Theme color code" }
+      }
+    },
+    "PublicPost": {
+      "collection": "public_journals",
+      "fields": {
+        "id": { "type": "string", "description": "Post ID" },
+        "author": { "type": "map", "description": "Author details name, handle, avatar" },
+        "title": { "type": "string", "description": "Title of public reflection" },
+        "content": { "type": "string", "description": "Content of reflection" },
+        "mood": { "type": "string", "description": "Mood title" },
+        "moodIcon": { "type": "string", "description": "Mood emoji" },
+        "tags": { "type": "array", "description": "Tags" },
+        "likes": { "type": "number", "description": "Like count" },
+        "resonateCount": { "type": "number", "description": "Resonate count" },
+        "timeAgo": { "type": "string", "description": "Time string" },
+        "location": { "type": "string", "description": "Location" },
+        "imageUrl": { "type": "string", "description": "Optional photo URL" },
+        "createdAt": { "type": "number", "description": "Timestamp" },
+        "userId": { "type": "string", "description": "Author UID if available" }
+      }
+    },
+    "Vault": {
+      "collection": "vaults",
+      "fields": {
+        "syncCode": { "type": "string", "description": "Unique multi-device sync code" },
+        "entries": { "type": "array", "description": "Serialized entries" },
+        "lastUpdated": { "type": "number", "description": "Timestamp of last sync push" },
+        "deviceName": { "type": "string", "description": "Device name" }
+      }
+    }
+  }
+}

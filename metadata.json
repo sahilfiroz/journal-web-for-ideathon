@@ -1,0 +1,6 @@
+{
+  "name": "Lumina 3D Journal",
+  "description": "A mindful journaling experience with public posts, linewise chronological journals, and an AI journaling assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

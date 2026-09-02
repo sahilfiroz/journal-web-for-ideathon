@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* 
+ * Lumina Professional 45-Degree Drafting Pencil Cursor
+ * - Precision needle graphite tip at (0, 0)
+ * - Forest Sage green barrel with brass ferrule matching Lumina's mindful aesthetic
+ * - Consistent across entire site, public journals, AI chat, upload modals, buttons, inputs
+ */
+
+:root, 
+html, 
+body,
+*,
+*::before,
+*::after,
+button, 
+a, 
+input, 
+textarea, 
+select, 
+summary, 
+dialog,
+[role="button"], 
+[role="link"], 
+[role="dialog"],
+.cursor-pointer,
+.cursor-text,
+.cursor-default {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M2 5 L5 2 L27 24 L24 27 Z' fill='rgba(0,0,0,0.2)' transform='translate(1, 1)'/%3E%3Cpolygon points='0,0 5,1 1,5' fill='%23111815'/%3E%3Cpolygon points='0,0 2.5,0.5 0.5,2.5' fill='%23000000'/%3E%3Cpolygon points='5,1 10,6 6,10 1,5' fill='%23f5e0c8'/%3E%3Cpolygon points='5,1 8.5,4.5 5,8 1,5' fill='%23dfbe9b'/%3E%3Cpolygon points='10,6 22,18 19,21 6,10' fill='%23365345'/%3E%3Cpolygon points='10,6 22,18 20,20 8,8' fill='%23486c5a'/%3E%3Cpolygon points='9,7 21,19 19.5,20.5 7.5,8.5' fill='%233a594b'/%3E%3Cpolygon points='22,18 25,21 22,24 19,21' fill='%23d4af37'/%3E%3Cpolygon points='22,18 24,20 21,23 19,21' fill='%23fef08a'/%3E%3Cpolygon points='23.5,19.5 25,21 23.5,22.5 22,21' fill='%23b45309'/%3E%3Cpath d='M25 21 L28 24 C29.5 25.5 29.5 27.5 28 29 C26.5 30.5 24.5 30.5 23 29 L20 26 Z' fill='%23f472b6'/%3E%3Cpath d='M25 21 L28 24 C29 25 29 26.5 28 27.5 L21.5 24.5 Z' fill='%23fb7185'/%3E%3Cpath d='M0 0 L5 1 L10 6 L22 18 L25 21 L28 24 C29.5 25.5 29.5 27.5 28 29 C26.5 30.5 24.5 30.5 23 29 L20 26 L19 21 L6 10 L1 5 Z' stroke='%23ffffff' stroke-width='0.85' stroke-linejoin='round' fill='none' opacity='0.95'/%3E%3Cpath d='M0 0 L5 1 L10 6 L22 18 L25 21 L28 24 C29.5 25.5 29.5 27.5 28 29 C26.5 30.5 24.5 30.5 23 29 L20 26 L19 21 L6 10 L1 5 Z' stroke='rgba(0,0,0,0.35)' stroke-width='0.4' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") 0 0, auto !important;
+}
+
+@layer base {
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    color: #28322c;
+    background-color: #fbf9f5;
+  }
+
+  h1, h2, h3, h4, .font-serif, .font-serif-heading {
+    font-family: 'Fraunces', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  p, span, div, input, textarea, button {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Minimalist Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8cebd;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2b49f;
+}
+
+/* Subtle mindfulness animations */
+@keyframes breathGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.animate-breath {
+  animation: breathGlow 4.5s ease-in-out infinite;
+}
+
+.font-reading {
+  font-family: 'Newsreader', Georgia, serif;
+  font-feature-settings: "liga", "kern";
+}
